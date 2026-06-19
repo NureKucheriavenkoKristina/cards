@@ -1,0 +1,4 @@
+Front	Back	Notes
+computer	компʼютер	tech
+moon	місяць	space
+beautiful	гарний	adjective

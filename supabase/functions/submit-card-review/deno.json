@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@cardly/srs/": "../../../packages/srs/src/"
+  }
+}

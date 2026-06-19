@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardly Presentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Перемикач мов -->
+    <div class="lang-switcher">
+      <button onclick="switchLang('uk')" id="btn-uk" class="active">UA</button>
+      <button onclick="switchLang('en')" id="btn-en">EN</button>
+    </div>
+
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow" data-key="hero-eyebrow">Демонстрація проєкту</p>
+          <h1>Cardly</h1>
+          <p class="subtitle" data-key="hero-subtitle">
+            Сучасний додаток для навчання за допомогою флеш-карток та інтервальних повторень. Створено з використанням Expo, React Native, Supabase та TypeScript.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="cardly.apk" download data-key="btn-download">Завантажити APK</a>
+            <a class="secondary-button" href="#details" data-key="btn-details">Детальніше про проєкт</a>
+          </div>
+        </div>
+        
+        <a class="hero-badge-github" href="https://github.com/NureBureikoNataliia/Cardly" target="_blank" rel="noreferrer">
+          <svg class="github-icon" viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+          </svg>
+          <span data-key="btn-github">Відкрити GitHub</span>
+        </a>
+      </header>
+
+      <section class="section business-card">
+        <div class="business-card-copy">
+          <h2 data-key="launch-title">Як запустити та протестувати Cardly</h2>
+          <p data-key="launch-desc">
+            Ви можете встановити готовий мобільний додаток або розгорнути проєкт локально для розробки та ознайомлення з кодом.
+          </p>
+          <ul>
+            <li data-key="launch-li1"><strong>Швидкий тест:</strong> Завантажте APK-файл за кнопкою вище та встановіть його прямо на свій Android-пристрій.</li>
+            <li data-key="launch-li2"><strong>Локальний запуск:</strong> Клонуйте репозиторій за допомогою Git, перейдіть у папку проєкту та виконайте команди: <code>npm install</code>, а потім <code>npm start</code>.</li>
+            <li data-key="launch-li3">Команда для збірки додатка, яка доступна в проєкті: <code>npm run build:android:download</code>.</li>
+          </ul>
+        </div>
+        <div class="business-card-meta">
+          <strong data-key="meta-project-label">Проєкт:</strong>
+          <p data-key="meta-project-desc">Cardly — інтерактивне навчання за допомогою карток із системою інтервальних повторень (SRS) та публічними колодами.</p>
+          <strong data-key="meta-tech-label">Технологічний стек:</strong>
+          <p>Expo, React Native, Supabase, TypeScript</p>
+          <strong data-key="meta-use-label">Рекомендоване використання:</strong>
+          <p data-key="meta-use-desc">Тестування, демонстрація та дистрибуція для рецензентів.</p>
+          <strong data-key="meta-apk-label">Шлях до APK:</strong>
+          <p><code>presentation-site/app.apk</code></p>
+        </div>
+      </section>
+
+      <section id="details" class="section cards-row">
+        <article class="card">
+          <h2>iOS / Android / Web</h2>
+          <p data-key="card-platforms">Усі три платформи працюють як один універсальний клієнт, створений на єдиній кодовій базі за допомогою Expo Router та React Native.</p>
+        </article>
+        <article class="card">
+          <h2 data-key="card-workflow-title">Процес навчання</h2>
+          <p data-key="card-workflow-desc">Керування колодами, проходження квізів та розумне інтервальне повторення в одному плавному та інтуїтивному інтерфейсі.</p>
+        </article>
+        <article class="card">
+          <h2 data-key="card-community-title">Спільнота та приватність</h2>
+          <p data-key="card-community-desc">Браузер публічних колод, інструменти скарг, а також гнучке налаштування видимості колод (публічні або приватні) та спільної роботи.</p>
+        </article>
+      </section>
+
+      <!-- Оновлені ключові можливості (Key Values) -->
+      <section class="section feature-list">
+        <h2 data-key="values-title">Ключові можливості</h2>
+        <div class="values-grid">
+          <ul>
+            <li data-key="v1"><strong>Створення колод:</strong> Створення нових колод для організації пов'язаних карток.</li>
+            <li data-key="v2"><strong>Додавання карток:</strong> Створення пар запитання/відповідь із текстом, зображеннями або аудіо.</li>
+            <li data-key="v3"><strong>Редагування карток/колод:</strong> Оновлення вмісту, зміна порядку карток або метаданих колоди.</li>
+            <li data-key="v4"><strong>Імпорт колод:</strong> Завантаження файлів CSV або зразків для масового додавання карток.</li>
+            <li data-key="v5"><strong>Навчання / Квіз:</strong> Запуск навчальних сесій із настроюваними режимами тестування.</li>
+            <li data-key="v6"><strong>Інтервальні повторення (SRS):</strong> Автоматичне планування карток для повторення на основі алгоритмів SRS.</li>
+            <li data-key="v7"><strong>Проходження квізів:</strong> Практика вивчення колод в ігровій формі.</li>
+          </ul>
+          <ul>
+            <li data-key="v8"><strong>Оцінювання відповідей:</strong> Позначення якості згадування для коригування графіка повторень.</li>
+            <li data-key="v9"><strong>Відстеження статистики:</strong> Перегляд прогресу навчання, серій днів (streaks) та ефективності кожної колоди.</li>
+            <li data-key="v10"><strong>Пошук та фільтрація:</strong> Пошук карток за текстом, тегами або статусом; фільтрація списків навчання.</li>
+            <li data-key="v11"><strong>Поширення / Експорт:</strong> Експорт колод або поширення посилань для спільної роботи.</li>
+            <li data-key="v12"><strong>Синхронізація / Беккап:</strong> Синхронізація прогресу між пристроями або експорт резервних копій.</li>
+            <li data-key="v13"><strong>Налаштування:</strong> Конфігурація теми, мови, нагадувань у сповіщеннях та навчальних преференцій.</li>
+            <li data-key="v14"><strong>Скарги / Прапорці:</strong> Позначення проблемних карток або надсилання відгуків для підтримки якості.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section tech-stack">
+        <h2 data-key="tech-title">Технологічний стек</h2>
+        <div class="tech-grid">
+          <span>Expo</span>
+          <span>React Native</span>
+          <span>TypeScript</span>
+          <span>Supabase</span>
+          <span>expo-router</span>
+          <span>react-native-web</span>
+          <span>lucide-react-native</span>
+          <span>CSV import / xlsx</span>
+        </div>
+      </section>
+
+      <!-- Новий детальний блок структури проєкту -->
+      <section class="section project-structure-section">
+        <h2 data-key="struct-title">Структура проєкту</h2>
+        <p class="structure-intro" data-key="struct-purpose"><strong>Мета:</strong> Cardly є кросплатформним додатком для навчання (Expo + web) із чіткою структурою: код додатка, асети, збірки під платформи, перевикористовувані пакети та невеликий сайт-презентація.</p>
+        
+        <div class="structure-grid">
+          <div class="struct-card">
+            <h3 data-key="st-top-t">Верхній рівень (Root)</h3>
+            <p data-key="st-top-d">Містить конфігурацію додатка та файли збірки (app.json, eas.json, metro.config, package.json), а також папки платформ для Android та нативних інструментів.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-src-t">Вихідний код (App source)</h3>
+            <p data-key="st-src-d">Головний додаток знаходиться в src/app — сторінки, екрани, роутинг та лейаути. UI побудований на компонентах, де велика папка components містить елементи на кшталт форм, модалок та базових UI-примітивів.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-state-t">Стан та логіка</h3>
+            <p data-key="st-state-d">Контексти та хуки згруповані в src/contexts та src/hooks, що дозволяє тримати авторизацію, теми, мову та налаштування навчання централізованими й легкими для перевикористання.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-shared-t">Спільні дані та типи</h3>
+            <p data-key="st-shared-d">Папка data/ містить початкові або демонстраційні колоди/картки; types/ та lib/ зберігають спільні типи TypeScript та хелпери для забезпечення узгодженості функцій.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-assets-t">Асети (Assets)</h3>
+            <p data-key="st-assets-d">В assets/ зберігаються шрифти та зображення, які використовуються додатком та сайтом презентації, відокремлюючи медіафайли від коду.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-native-t">Нативний Android</h3>
+            <p data-key="st-native-d">Директорія android/ містить конфігурації Gradle та нативні налаштування для Android, необхідні для збірки автономних додатків.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-mono-t">Пакети Monorepo</h3>
+            <p data-key="st-mono-d">Папка packages/ містить ізольовані пакети (наприклад, srs/) для логіки інтервальних повторень або інших спільних бібліотек, що полегшує тестування.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-scripts-t">Скрипти та інструменти</h3>
+            <p data-key="st-scripts-d">Папка scripts/ містить скрипти автоматизації (наприклад, синхронізація, хелпери інструментарію), які використовуються під час розробки та деплою.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-site-t">Сайт-презентація</h3>
+            <p data-key="st-site-d">Невеликий статичний сайт знаходиться в presentation-site для маркетингу або документації; він незалежний від додатка, але використовує спільні асети.</p>
+          </div>
+          <div class="struct-card">
+            <h3 data-key="st-test-t">Тестування та доки</h3>
+            <p data-key="st-test-d">Тести (де вони є) розміщені поруч із компонентами; документація та приклади даних для імпорту живуть у docs/ та docs/import-samples/.</p>
+          </div>
+        </div>
+
+        <div class="structure-callout">
+          <h3 data-key="st-nav-t">Як орієнтуватися в проєкті</h3>
+          <p data-key="st-nav-d">Почніть із точки входу додатка (лейаути/сторінки в папці app), потім вивчіть components для UI, contexts для стану, packages для основних алгоритмів та assets для медіа. Збірка та специфічні конфігурації платформ знаходяться в колі репозиторію та в android/.</p>
+        </div>
+      </section>
+
+      <section class="section callout">
+        <h2 data-key="why-title">Чому цей проєкт особливий</h2>
+        <p data-key="why-desc">
+          Cardly поєднує в собі повноцінний функціонал для створення флеш-карток із витонченим, адаптивним інтерфейсом та кросплатформеною доступністю. Проєкт демонструє практичне застосування сучасних технологій мобільної та веб-розробки, синхронізацію даних через хмару та орієнтований на користувача дизайн.
+        </p>
+      </section>
+    </div>
+
+    <!-- Скрипт двомовності -->
+    <script>
+      const translations = {
+        uk: {
+          "hero-eyebrow": "Демонстрація проєкту",
+          "hero-subtitle": "Сучасний додаток для навчання за допомогою флеш-карток та інтервальних повторень. Створено з використанням Expo, React Native, Supabase та TypeScript.",
+          "btn-download": "Завантажити APK",
+          "btn-details": "Детальніше про проєкт",
+          "btn-github": "Відкрити GitHub",
+          "launch-title": "Як запустити та протестувати Cardly",
+          "launch-desc": "Ви можете встановити готовий мобільний додаток або розгорнути проєкт локально для розробки та ознайомлення з кодом.",
+          "launch-li1": "<strong>Швидкий тест:</strong> Завантажте APK-файл за кнопкою вище та встановіть його прямо на свій Android-пристрій.",
+          "launch-li2": "<strong>Локальний запуск:</strong> Клонуйте репозиторій за допомогою Git, перейдіть у папку проєкту та виконайте команди: <code>npm install</code>, а потім <code>npm start</code>.",
+          "launch-li3": "Команда для збірки додатка, яка доступна в проєкті: <code>npm run build:android:download</code>.",
+          "meta-project-label": "Проєкт:",
+          "meta-project-desc": "Cardly — інтерактивне навчання за допомогою карток із системою інтервальних повторень (SRS) та публічними колодами.",
+          "meta-tech-label": "Технологічний стек:",
+          "meta-use-label": "Рекомендоване використання:",
+          "meta-use-desc": "Тестування, демонстрація та дистрибуція для рецензентів.",
+          "meta-apk-label": "Шлях до APK:",
+          "card-platforms": "Усі три платформи працюють як один універсальний клієнт, створений на єдиній кодовій базі за допомогою Expo Router та React Native.",
+          "card-workflow-title": "Процес навчання",
+          "card-workflow-desc": "Керування колодами, проходження квізів та розумне інтервальне повторення в одному плавному та інтуїтивному інтерфейсі.",
+          "card-community-title": "Спільнота та приватність",
+          "card-community-desc": "Браузер публічних колод, інструменти скарг, а також гнучке налаштування видимості колод (публічні або приватні) та спільної роботи.",
+          "values-title": "Ключові можливості",
+          "v1": "<strong>Створення колод:</strong> Створення нових колод для організації пов'язаних карток.",
+          "v2": "<strong>Додавання карток:</strong> Створення пар запитання/відповідь із текстом, зображеннями або аудіо.",
+          "v3": "<strong>Редагування карток/колод:</strong> Оновлення вмісту, зміна порядку карток або метаданих колоди.",
+          "v4": "<strong>Імпорт колод:</strong> Завантаження файлів CSV або зразків для масового додавання карток.",
+          "v5": "<strong>Навчання / Квіз:</strong> Запуск навчальних сесій із настроюваними режимами тестування.",
+          "v6": "<strong>Інтервальні повторення (SRS):</strong> Автоматичне планування карток для повторення на основі алгоритмів SRS.",
+          "v7": "<strong>Проходження квізів:</strong> Практика вивчення колод в ігровій формі.",
+          "v8": "<strong>Оцінювання відповідей:</strong> Позначення якості згадування для коригування графіка повторень.",
+          "v9": "<strong>Відстеження статистики:</strong> Перегляд прогресу навчання, серій днів (streaks) та ефективності кожної колоди.",
+          "v10": "<strong>Пошук та фільтрація:</strong> Пошук карток за текстом, тегами або статусом; фільтрація списків навчання.",
+          "v11": "<strong>Поширення / Експорт:</strong> Експорт колод або поширення посилань для спільної роботи.",
+          "v12": "<strong>Синхронізація / Беккап:</strong> Синхронізація прогресу між пристроями або експорт резервних копій.",
+          "v13": "<strong>Налаштування:</strong> Конфігурація теми, мови, нагадувань у сповіщеннях та навчальних преференцій.",
+          "v14": "<strong>Скарги / Прапорці:</strong> Позначення проблемних карток або надсилання відгуків для підтримки якості.",
+          "tech-title": "Технологічний стек",
+          "struct-title": "Структура проєкту",
+          "struct-purpose": "<strong>Мета:</strong> Cardly є кросплатформним додатком для навчання (Expo + web) із чіткою структурою: код додатка, асети, збірки під платформи, перевикористовувані пакети та невеликий сайт-презентація.",
+          "st-top-t": "Верхній рівень (Root)",
+          "st-top-d": "Містить конфігурацію додатка та файли збірки (app.json, eas.json, metro.config, package.json), а також папки платформ для Android та нативних інструментів.",
+          "st-src-t": "Вихідний код (App source)",
+          "st-src-d": "Головний додаток знаходиться в src/app — сторінки, екрани, роутинг та лейаути. UI побудований на компонентах, де велика папка components містить елементи на кшталт форм, модалок та базових UI-примітивів.",
+          "st-state-t": "Стан та логіка",
+          "st-state-d": "Контексти та хуки згруповані в src/contexts та src/hooks, що дозволяє тримати авторизацію, теми, мову та налаштування навчання централізованими й легкими для перевикористання.",
+          "st-shared-t": "Спільні дані та типи",
+          "st-shared-d": "Папка data/ містить початкові або демонстраційні колоди/картки; types/ та lib/ зберігають спільні типи TypeScript та хелпери для забезпечення узгодженості функцій.",
+          "st-assets-t": "Асети (Assets)",
+          "st-assets-d": "В assets/ зберігаються шрифти та зображення, які використовуються додатком та сайтом презентації, відокремлюючи медіафайли від коду.",
+          "st-native-t": "Нативний Android",
+          "st-native-d": "Директорія android/ містить конфігурації Gradle та нативні налаштування для Android, необхідні для збірки автономних додатків.",
+          "st-mono-t": "Пакети Monorepo",
+          "st-mono-d": "Папка packages/ містить ізольовані пакети (наприклад, srs/) для логіки інтервальних повторень або інших спільних бібліотек, що полегшує тестування.",
+          "st-scripts-t": "Скрипти та інструменти",
+          "st-scripts-d": "Папка scripts/ містить скрипти автоматизації (наприклад, синхронізація, хелпери інструментарію), які використовуються під час розробки та деплою.",
+          "st-site-t": "Сайт-презентація",
+          "st-site-d": "Невеликий статичний сайт знаходиться в presentation-site для маркетингу або документації; він незалежний від додатка, але використовує спільні асети.",
+          "st-test-t": "Тестування та доки",
+          "st-test-d": "Тести (де вони є) розміщені поруч із компонентами; документація та приклади даних для імпорту живуть у docs/ та docs/import-samples/.",
+          "st-nav-t": "Як орієнтуватися в проєкті",
+          "st-nav-d": "Почніть із точки входу додатка (лейаути/сторінки в папці app), потім вивчіть components для UI, contexts для стану, packages для основних алгоритмів та assets для медіа. Збірка та специфічні конфігурації платформ знаходяться в колі репозиторію та в android/.",
+          "why-title": "Чому цей проєкт особливий",
+          "why-desc": "Cardly поєднує в собі повноцінний функціонал для створення флеш-карток із витонченим, адаптивним інтерфейсом та кросплатформеною доступністю. Проєкт демонструє практичне застосування сучасних технологій мобільної та веб-розробки, синхронізацію даних через хмару та орієнтований на користувача дизайн."
+        },
+        en: {
+          "hero-eyebrow": "Project Showcase",
+          "hero-subtitle": "A modern flashcard and spaced-repetition learning app built with Expo, React Native, Supabase and TypeScript.",
+          "btn-download": "Download APK",
+          "btn-details": "View project details",
+          "btn-github": "Open GitHub",
+          "launch-title": "How to Run and Test Cardly",
+          "launch-desc": "You can install the ready-made mobile app or deploy the project locally for development and code review.",
+          "launch-li1": "<strong>Quick test:</strong> Download the APK file using the button above and install it directly on your Android device.",
+          "launch-li2": "<strong>Local launch:</strong> Clone the repository using Git, navigate to the project folder and run: <code>npm install</code>, then <code>npm start</code>.",
+          "launch-li3": "Build command available in the project: <code>npm run build:android:download</code>.",
+          "meta-project-label": "Project:",
+          "meta-project-desc": "Cardly – interactive flashcard learning with SRS and public decks.",
+          "meta-tech-label": "Tech Stack:",
+          "meta-use-label": "Suggested use:",
+          "meta-use-desc": "Testing, demo installs, and reviewer distribution.",
+          "meta-apk-label": "APK Path:",
+          "card-platforms": "Fully built with Expo Router and React Native to support mobile and web platforms in a single codebase.",
+          "card-workflow-title": "Learning Workflow",
+          "card-workflow-desc": "Deck management, quiz practice, and spaced repetition in one smooth and intuitive flow.",
+          "card-community-title": "Community & Privacy",
+          "card-community-desc": "Public decks browser, reporting tools, and support for public/private deck visibility and collaboration.",
+          "values-title": "Key Features",
+          "v1": "<strong>Create deck:</strong> Make a new deck to organize related cards.",
+          "v2": "<strong>Add card:</strong> Add question/answer pairs with text, images, or audio.",
+          "v3": "<strong>Edit card/deck:</strong> Update content, reorder cards, or change deck metadata.",
+          "v4": "<strong>Import decks:</strong> Upload CSV or sample files to bulk-add cards.",
+          "v5": "<strong>Study / Quiz:</strong> Start study sessions with customizable quiz modes.",
+          "v6": "<strong>Spaced Repetition (SRS):</strong> Use SRS scheduling to review due cards automatically.",
+          "v7": "<strong>Play quiz:</strong> Practice decks in a game-like review flow.",
+          "v8": "<strong>Rate / Grade answers:</strong> Mark recall quality to influence scheduling.",
+          "v9": "<strong>Track stats:</strong> View study progress, streaks, and per-deck performance.",
+          "v10": "<strong>Search & filter:</strong> Find cards by text, tag, or status; filter study lists.",
+          "v11": "<strong>Share / Export:</strong> Export decks or share links for collaboration.",
+          "v12": "<strong>Sync / Backup:</strong> Sync progress across devices or export backups.",
+          "v13": "<strong>Settings:</strong> Configure theme, language, notification reminders, and study preferences.",
+          "v14": "<strong>Report / Flag:</strong> Report problematic cards or submit feedback to maintain quality.",
+          "tech-title": "Technology Stack",
+          "struct-title": "Project Structure",
+          "struct-purpose": "<strong>Purpose:</strong> Cardly is a cross-platform study app (Expo + web) organized for clarity: app code, assets, platform builds, reusable packages, and a small presentation site.",
+          "st-top-t": "Top-level (Root)",
+          "st-top-d": "Contains app config and build files (app.json, eas.json, metro.config, package.json) plus platform folders for Android and native build tooling.",
+          "st-src-t": "App source",
+          "st-src-d": "The main application lives under src/app — pages, screens, and routing/layout. UI is component-driven with a large components folder holding reusable pieces like forms, modals, and UI primitives.",
+          "st-state-t": "State & logic",
+          "st-state-d": "Contexts and hooks are grouped under src/contexts and src/hooks, keeping auth, theme, language, and study settings centralized and easy to reuse across screens.",
+          "st-shared-t": "Shared data & types",
+          "st-shared-d": "data/ contains seed or sample decks/cards; types/ and lib/ hold shared TypeScript types and helpers so features remain consistent.",
+          "st-assets-t": "Assets",
+          "st-assets-d": "assets/ stores fonts and images used by the app and presentation site, keeping media separate from code.",
+          "st-native-t": "Native & Android",
+          "st-native-d": "The android/ directory includes Gradle and native build configs for Android when building standalone apps.",
+          "st-mono-t": "Monorepo packages",
+          "st-mono-d": "packages/ contains self-contained packages (e.g., srs/) for spaced-repetition logic or other shared libraries, enabling reuse and easier testing.",
+          "st-scripts-t": "Scripts & tooling",
+          "st-scripts-d": "scripts/ holds automation scripts (e.g., sync, tooling helpers) used during development and deployment.",
+          "st-site-t": "Presentation site",
+          "st-site-d": "A small static site lives in presentation-site for marketing or docs; it’s independent from the app but shares assets.",
+          "st-test-t": "Testing & docs",
+          "st-test-d": "Tests (where present) are colocated with components; docs and sample data live in docs/ and docs/import-samples/.",
+          "st-nav-t": "How to navigate",
+          "st-nav-d": "Start at the app entry (layout/pages in the app folder), then inspect components for UI, contexts for state, packages for core algorithms, and assets for media. Build and platform-specific configuration live at the repo root and in android/.",
+          "why-title": "Why This Project Stands Out",
+          "why-desc": "Cardly combines a full-featured flashcard creation experience with a polished, responsive UI and strong platform coverage. It demonstrates practical use of modern mobile/web cross-platform development, cloud data synchronization, and learner-focused design."
+        }
+      };
+
+      function switchLang(lang) {
+        // Оновлення тексту за дата-атрибутами
+        document.querySelectorAll("[data-key]").forEach(el => {
+          const key = el.getAttribute("data-key");
+          if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+          }
+        });
+
+        // Оновлення активного класу кнопок
+        document.getElementById("btn-uk").classList.toggle("active", lang === 'uk');
+        document.getElementById("btn-en").classList.toggle("active", lang === 'en');
+        
+        // Зміна атрибуту lang тегу html
+        document.documentElement.lang = lang;
+      }
+    </script>
+  </body>
+</html>
