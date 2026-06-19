@@ -116,7 +116,7 @@ export default function PublicDecksView({ forGuest }: PublicDecksViewProps) {
     { key: "titleDesc", label: t("sortTitleZA") },
     { key: "ratingDesc", label: t("sortRatingDesc") },
     { key: "ratingAsc", label: t("sortRatingAsc") },
-    { key: "cards", label: t("cards") },
+    { key: "cards", label: t("sortCardsDesc") },
   ];
 
   const listHeader = (
