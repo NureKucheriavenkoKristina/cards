@@ -80,6 +80,14 @@ export default function ModalScreen() {
             border
           />
           <ActionRow
+            icon="globe"
+            label={t('website')}
+            color="#10b981"
+            C={C}
+            onPress={() => Linking.openURL('https://storied-truffle-5b83cd.netlify.app/')}
+            border
+          />
+          <ActionRow
             icon="github"
             label="GitHub"
             color={C.isDark ? '#e2e8f0' : '#1e293b'}
